@@ -24,7 +24,7 @@ MapReduce是Google提出的一个软件架构，用于大规模数据集（大�
 
 在微服务的架构下, 可能某一份数据需要call几个service聚合而成, 如果用`串行`的方式去做, 接口的耗时肯定会高, 参考`Ma pReduce`的思想, 我们可以使用并行的方式去做, 也就是说, 接口的最高耗时肯定是延迟最高的`service call` + `自身处理时间`
 
-![image-20210905135030264](/Users/sado/go/src/go-map-reduce/README.assets/image-20210905135030264.png)
+![image-20210905135030264](./image-time.png)
 
 
 
@@ -47,6 +47,8 @@ MapReduce是Google提出的一个软件架构，用于大规模数据集（大�
 3) 单goroutine执行的`ReduceFunc`
 
 4) resource, map, reduce之间通过`channel`进行通信
+
+![image-20210905142734423](./image-process.png)
 
 
 
